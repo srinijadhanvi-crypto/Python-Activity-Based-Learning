@@ -1,0 +1,7 @@
+deposit 250 ACCEPTED; balance: 1250
+withdraw 400 ACCEPTED; balance: 850
+withdraw 600 REJECTED: withdrawal limit exceeded
+deposit -10 REJECTED: invalid type or amount
+withdraw 500 ACCEPTED; balance: 350
+transfer 10 REJECTED: invalid type or amount
+Summary: accepted = 3, rejected = 3, balance = 350

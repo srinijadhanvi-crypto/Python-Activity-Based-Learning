@@ -1,0 +1,7 @@
+Anu: total 180, average 60.00
+Bala: total 195, average 65.00
+Charan: total 180, average 60.00
+Math: average 78.33 OK
+Science: average 33.33 LOW
+English: average 73.33 OK
+Top performer: Bala (195)

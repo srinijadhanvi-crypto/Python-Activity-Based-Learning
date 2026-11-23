@@ -1,0 +1,7 @@
+OK: T01 1000
+SUSPICIOUS: T02 6000 above threshold
+SUSPICIOUS: T01 7000 duplicate ID, above threshold
+INVALID:  20
+INVALID: T03 -1
+OK: T04 5000
+Summary: suspicious = 2, invalid = 2

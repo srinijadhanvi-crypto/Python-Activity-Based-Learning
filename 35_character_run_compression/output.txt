@@ -1,0 +1,10 @@
+Input: 'AAABBCCCC'; encoded: '3A2B4C'; lengths: 9 -> 6
+Result: beneficial
+Input: 'ABCD'; encoded: '1A1B1C1D'; lengths: 4 -> 8
+Result: not beneficial
+Input: ''; encoded: ''; lengths: 0 -> 0
+Result: not beneficial
+Input: '111111'; encoded: '61'; lengths: 6 -> 2
+Result: beneficial
+Input: 'AAAAAAAAAAAA'; encoded: '12A'; lengths: 12 -> 3
+Result: beneficial

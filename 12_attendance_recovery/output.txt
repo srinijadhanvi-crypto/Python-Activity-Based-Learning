@@ -1,0 +1,14 @@
+Scenario: (60, 80, 75, 0)
+Current after missed classes: 75.00%
+Result: 0 consecutive classes
+Scenario: (60, 80, 75, 5)
+Current after missed classes: 70.59%
+Result: 15 consecutive classes
+Scenario: (9, 10, 100, 0)
+Current after missed classes: 90.00%
+Result: Impossible to reach 100%
+Scenario: (10, 10, 100, 0)
+Current after missed classes: 100.00%
+Result: 0 consecutive classes
+Scenario: (8, 0, 75, 0)
+Result: Invalid input

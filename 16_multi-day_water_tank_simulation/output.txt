@@ -1,0 +1,6 @@
+In 50, out 5: level 85, overflow 0, shortage 0
+In 30, out 10: level 90, overflow 15, shortage 0
+In 0, out 120: level 0, overflow 0, shortage 30
+In 80, out 0: level 80, overflow 0, shortage 0
+First threshold interval: 1
+Total overflow: 15; total shortage: 30

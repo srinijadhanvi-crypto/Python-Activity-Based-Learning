@@ -1,0 +1,12 @@
+Dimension: 4
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+Dimension: 1
+*
+Dimension: 0
+Invalid dimension; use 1 to 20

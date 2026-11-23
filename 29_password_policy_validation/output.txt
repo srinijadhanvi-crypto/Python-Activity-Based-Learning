@@ -1,0 +1,5 @@
+Good7!xy ACCEPTED
+abc REJECTED: minimum length 8; missing uppercase; missing digit; missing special character
+AAAabc1! REJECTED: three repeated characters
+MyPassword1! REJECTED: prohibited substring
+NoSpecial7 REJECTED: missing special character
