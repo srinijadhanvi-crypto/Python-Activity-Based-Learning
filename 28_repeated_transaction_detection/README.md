@@ -34,12 +34,15 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Set the threshold and an empty list of seen IDs.
-2. Validate each identifier and amount.
-3. Mark later occurrences of an ID and amounts strictly above the threshold.
-4. Print all suspicious and invalid records and counts.
-END
+SET threshold and empty seen-ID list
+FOR each transaction
+  IF ID is blank or amount is negative
+    PRINT invalid
+  ELSE
+    CHECK whether ID was seen before
+    CHECK whether amount exceeds threshold
+    PRINT all applicable reasons or OK
+PRINT suspicious and invalid counts
 ```
 
 ## Python source code
@@ -51,7 +54,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - empty ID and negative amount → invalid
 - ₹5000 → not above threshold
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

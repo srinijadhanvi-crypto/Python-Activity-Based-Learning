@@ -34,12 +34,15 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Read or set the dimension and validate its range.
-2. Generate upper rows with leading spaces and hollow interior.
-3. Generate lower rows in reverse order.
-4. Reject invalid dimensions.
-END
+FOR each dimension
+  IF dimension is outside 1 to 20
+    PRINT invalid dimension
+  ELSE
+    FOR row from 1 to dimension
+      PRINT leading spaces, stars and hollow spaces
+    FOR row from dimension - 1 down to 1
+      PRINT leading spaces, stars and hollow spaces
+END FOR
 ```
 
 ## Python source code
@@ -50,7 +53,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - 1 → one star
 - 0 → invalid dimension
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

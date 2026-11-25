@@ -16,7 +16,7 @@ Week starts Monday (0) through Sunday (6). Day count must be 28, 29, 30 or 31; t
 ## Algorithm
 1. Validate first weekday and month length.
 2. Print the weekday heading and initial padding.
-3. Print each day in a fixed-width field, breaking after Sunday.
+3. Use nested week and weekday loops to print dates in fixed-width fields.
 4. Reject invalid calendar settings.
 
 ## Flowchart
@@ -25,21 +25,23 @@ flowchart TD
     S([Start]) --> A
     A["Validate first weekday and month length."] --> N1
     N1["Print the weekday heading and initial padding."] --> N2
-    N2["Print each day in a fixed-width field, breaking after Sunday."] --> N3
+    N2["Use nested week and weekday loops to print dates in fixed-width fields."] --> N3
     N3["Reject invalid calendar settings."] --> Z
     Z([End])
 ```
 
-**Text equivalent:** Start → Validate first weekday and month length. → Print the weekday heading and initial padding. → Print each day in a fixed-width field, breaking after Sunday. → Reject invalid calendar settings. → End.
+**Text equivalent:** Start → Validate first weekday and month length. → Print the weekday heading and initial padding. → Use nested week and weekday loops to print dates in fixed-width fields. → Reject invalid calendar settings. → End.
 
 ## Pseudocode
 ```text
-BEGIN
-1. Validate first weekday and month length.
-2. Print the weekday heading and initial padding.
-3. Print each day in a fixed-width field, breaking after Sunday.
-4. Reject invalid calendar settings.
-END
+FOR each starting weekday and month length
+  IF either value is invalid, print error
+  ELSE print weekday heading
+    WHILE dates remain
+      FOR each weekday in a week
+        ADD leading spaces or the next date
+      PRINT the week
+END FOR
 ```
 
 ## Python source code
@@ -51,7 +53,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - start 7 → invalid
 - 27 days → invalid
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

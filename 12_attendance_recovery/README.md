@@ -34,12 +34,19 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Validate attendance, target and future missed classes.
-2. Add the future missed classes to total classes.
-3. If target is already met, return zero; if 100% is unattainable, report impossible.
-4. Attend one class at a time until the threshold is met.
-END
+FOR each attendance scenario
+  IF attendance, total, target or missed classes are invalid
+    PRINT invalid input
+  ELSE
+    ADD future missed classes to total
+    IF target is 100 and attendance is below total
+      PRINT impossible
+    ELSE
+      SET needed to 0
+      WHILE attendance percentage is below target
+        ADD 1 to attended, total and needed
+      PRINT needed
+END FOR
 ```
 
 ## Python source code
@@ -52,7 +59,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - (10, 10, 100, 0) → 0 classes
 - (8, 0, 75, 0) → invalid
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

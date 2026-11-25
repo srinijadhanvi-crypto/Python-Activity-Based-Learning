@@ -34,12 +34,14 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Inspect each sample string.
-2. Count each consecutive run using a loop.
-3. Append its count and character to the encoded result.
-4. Compare character lengths and report whether encoding is beneficial.
-END
+FOR each string
+  SET encoded text to empty
+  WHILE characters remain
+    COUNT the consecutive run of the current character
+    APPEND count and character to encoded text
+  COMPARE original and encoded lengths
+  PRINT encoded text and whether it saves space
+END FOR
 ```
 
 ## Python source code
@@ -51,7 +53,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - empty → empty, not beneficial
 - 12 As → 12A
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

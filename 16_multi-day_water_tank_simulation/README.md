@@ -34,12 +34,14 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Validate the capacity, initial level, threshold and interval quantities.
-2. For each interval add inflow and record any overflow.
-3. Subtract outflow and record any shortage.
-4. Record the first end-of-interval level at or above threshold and summarize.
-END
+VALIDATE capacity, level and threshold
+FOR each interval
+  IF inflow or outflow is negative, skip interval
+  ADD inflow; record overflow above capacity
+  SUBTRACT outflow; record any shortage
+  RECORD first interval with final level at threshold
+  PRINT level, overflow and shortage
+PRINT first interval and total overflow and shortage
 ```
 
 ## Python source code
@@ -51,7 +53,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - (0,120) → shortage 30, level 0
 - (80,0) → level 80
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

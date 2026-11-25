@@ -34,12 +34,16 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Set opening balance and counters.
-2. Inspect each transaction and validate its type and amount.
-3. Update the balance only for valid deposits or withdrawals.
-4. Print each decision and summarize accepted and rejected transactions.
-END
+SET opening balance, limit and counters
+FOR each transaction
+  IF type or amount is invalid, limit is exceeded,
+     or withdrawal exceeds balance
+    REJECT and count transaction
+  ELSE
+    ADD deposit or SUBTRACT withdrawal from balance
+    COUNT accepted transaction
+  PRINT decision
+PRINT counters and balance
 ```
 
 ## Python source code
@@ -50,9 +54,9 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - Withdraw 400 → balance 850
 - Withdraw 600 → rejected (limit)
 - Deposit -10 and transfer → rejected
-- Withdraw 500 → final balance 350
+- Withdraw 500 → balance 350; then withdraw 400 → insufficient balance
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

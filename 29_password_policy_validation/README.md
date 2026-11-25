@@ -34,12 +34,13 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. For each password check length and character categories.
-2. Check for three identical consecutive characters.
-3. Check prohibited substrings without case sensitivity.
-4. Print all failed rules or an acceptance message.
-END
+FOR each password
+  CHECK minimum length
+  SCAN characters for uppercase, lowercase, digit and special
+  CHECK for three identical consecutive characters
+  CHECK for prohibited substrings ignoring case
+  PRINT every failed condition or accepted
+END FOR
 ```
 
 ## Python source code
@@ -52,7 +53,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - MyPassword1! → prohibited substring
 - NoSpecial7 → missing special
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

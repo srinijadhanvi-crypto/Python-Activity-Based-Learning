@@ -34,12 +34,15 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Validate the key and each response string.
-2. Compare corresponding characters and count correct, incorrect and unanswered.
-3. Calculate the score using the stated marking scheme.
-4. Print the result or a validation error.
-END
+VALIDATE the answer key
+FOR each student response
+  CHECK response length and characters
+  IF invalid, print error
+  ELSE compare each answer with the key
+    COUNT correct, incorrect and unanswered
+    SCORE = correct * 4 - incorrect
+    PRINT counts and score
+END FOR
 ```
 
 ## Python source code
@@ -51,7 +54,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - ------ → score 0
 - ABCXAB and AB → invalid
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

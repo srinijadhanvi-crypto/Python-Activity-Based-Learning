@@ -34,12 +34,13 @@ flowchart TD
 
 ## Pseudocode
 ```text
-BEGIN
-1. Validate names, dimensions and marks.
-2. Calculate each student total and average.
-3. Calculate each subject average and flag low averages.
-4. Find and report every student tied for the highest total.
-END
+VALIDATE matrix size and marks
+IF valid
+  FOR each student, calculate total and average
+  FOR each subject, calculate average and flag below 40
+  FIND highest student total
+  PRINT every student with that total
+ELSE print invalid matrix
 ```
 
 ## Python source code
@@ -51,7 +52,7 @@ See [`solution.py`](solution.py). The sample inputs are defined near the top of 
 - Science → average 33.33, LOW
 - Math and English → OK
 
-The included program runs these examples. Actual console output is in [`output.txt`](output.txt); the image below is rendered directly from that output.
+The program output is shown below.
 
 ## Output screenshot
 ![Program output](output.png)

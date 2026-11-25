@@ -1,6 +1,6 @@
 balance = 1000
 limit = 500
-transactions = [("deposit", 250), ("withdraw", 400), ("withdraw", 600), ("deposit", -10), ("withdraw", 500), ("transfer", 10)]
+transactions = [("deposit", 250), ("withdraw", 400), ("withdraw", 600), ("deposit", -10), ("withdraw", 500), ("withdraw", 400), ("transfer", 10)]
 accepted = 0
 rejected = 0
 for kind, amount in transactions:
